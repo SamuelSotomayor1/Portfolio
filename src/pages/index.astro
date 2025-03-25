@@ -1,18 +1,23 @@
 ---
+import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import Projects from '../components/Projects.astro';
 import Skills from '../components/Skills.astro';
 import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Tech Portfolio | Your Name">
+<Layout title="Mi Portfolio">
 	<main>
-		<Hero />
-		<About />
-		<Projects />
-		<Skills />
-		<Contact />
+		<body class="min-h-screen bg-black text-white">
+			<Hero />
+			<About />
+			<Projects />
+			<Skills />
+			<Contact />
+			<Footer />
+		</body>
 	</main>
 </Layout>

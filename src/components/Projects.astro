@@ -4,14 +4,14 @@
 
 <section id="projects" class="h-screen flex items-center bg-black">
     <div class="container px-4 mx-auto">
-      <h2 class="text-5xl md:text-6xl font-bold mb-2 -mt-20 text-center leading-tight">
+      <h2 class="text-5xl md:text-6xl font-bold mb-2 -mt-20 text-center leading-tight scroll">
         <span class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
           My Projects
         </span>
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-24">
         <a href="https://github.com/IgnacioBarraza/BlackSharkWeb" target="_blank">
-          <div class="group overflow-hidden bg-zinc-900 border border-zinc-800 rounded-lg transition-all duration-300 hover:border-purple-500/50">
+          <div class="group overflow-hidden bg-zinc-900 border border-zinc-800 rounded-lg transition-all duration-300 hover:border-purple-500/50 scroll">
             <div class="relative h-48 overflow-hidden">
               <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10 opacity-60 transition-opacity duration-300 group-hover:opacity-80"></div>
               <img
@@ -63,7 +63,7 @@
         </a>
 
         <a href="https://github.com/SamuelSotomayor1/crud-golden-boot" target="_blank">
-          <div class="group overflow-hidden bg-zinc-900 border border-zinc-800 rounded-lg transition-all duration-300 hover:border-purple-500/50">
+          <div class="group overflow-hidden bg-zinc-900 border border-zinc-800 rounded-lg transition-all duration-300 hover:border-purple-500/50 scroll">
             <div class="relative h-48 overflow-hidden">
               <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10 opacity-60 transition-opacity duration-300 group-hover:opacity-80"></div>
               <img
@@ -114,7 +114,7 @@
           </div>
         </a>
         
-          <div class="group overflow-hidden bg-zinc-900 border border-zinc-800 rounded-lg transition-all duration-300 hover:border-purple-500/50">
+          <div class="group overflow-hidden bg-zinc-900 border border-zinc-800 rounded-lg transition-all duration-300 hover:border-purple-500/50 scroll">
             <a href="https://github.com/SamuelSotomayor1/login-next" target="_blank">
             <div class="relative h-48 overflow-hidden">
               <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10 opacity-60 transition-opacity duration-300 group-hover:opacity-80"></div>
@@ -168,3 +168,24 @@
       </div>
     </div>
   </section>
+
+<style>
+  @keyframes futuristicFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    filter: blur(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.scroll {
+  animation: futuristicFade 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+</style>

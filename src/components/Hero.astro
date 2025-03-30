@@ -16,15 +16,15 @@
   <div class="scan-line absolute inset-0 z-0 w-full h-full"></div>
   
   <div class="container px-4 mx-auto text-center z-20">
-    <h1 class="text-3xl md:text-7xl lg:text-8xl font-bold mb-4 z-10 leading-normal pb-2">
+    <h1 class="text-3xl md:text-7xl lg:text-8xl font-bold mb-4 z-10 leading-normal pb-2 tech-card">
       <span class="block bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
         Samuel Sotomayor
       </span>
     </h1>
-    <p class="text-xl md:text-2xl text-zinc-400 max-w-2xl mx-auto mb-16 z-2">
-      Passionate web developer from Chile 🇨🇱, driven to build and innovate through challenging projects.
+    <p class="text-xl md:text-2xl text-zinc-400 max-w-2xl mx-auto mb-16 z-2 tech-card">
+      Web developer from Chile 🇨🇱, driven to build and innovate through challenging projects.
     </p>
-    <div class="flex flex-wrap gap-4 justify-center relative z-20 items-center">
+    <div class="flex flex-wrap gap-4 justify-center relative z-20 items-center tech-card">
       <a
         href="#projects"
         class="px-6 py-3 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium flex items-center transition-all duration-300 hover:scale-105"
@@ -44,10 +44,10 @@
         </svg>
       </a>
       <a
-        href="#contact"
+        href="#skills"
         class="px-6 py-3 rounded-md border border-zinc-700 text-zinc-300 hover:bg-zinc-900 font-medium transition-all duration-300 hover:scale-105 hover:border-cyan-500"
       >
-        Contact Me
+        Skills
       </a>
     </div>
   </div>
@@ -150,4 +150,40 @@
   .animate-blob {
     animation: blob 5s infinite;
   }
+
+  <style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+  
+  .animate-pulse {
+    animation: pulse 3s infinite;
+  }
+  
+  .tech-card {
+    animation: fade-in 0.5s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .tech-card:nth-child(1) { animation-delay: 0.1s; }
+  .tech-card:nth-child(2) { animation-delay: 0.2s; }
+  .tech-card:nth-child(3) { animation-delay: 0.3s; }
+  .tech-card:nth-child(4) { animation-delay: 0.4s; }
+  .tech-card:nth-child(5) { animation-delay: 0.5s; }
+  .tech-card:nth-child(6) { animation-delay: 0.6s; }
+  .tech-card:nth-child(7) { animation-delay: 0.7s; }
+  .tech-card:nth-child(8) { animation-delay: 0.8s; }
+  
+</style>
 </style>

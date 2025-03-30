@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.15",
-    "astro": "^5.5.4"
+    "astro": "^5.5.4",
+    "react-typed": "^2.0.12"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

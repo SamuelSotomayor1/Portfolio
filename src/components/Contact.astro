@@ -3,7 +3,7 @@
 ---
 
 <section id="contact" class="h-screen flex items-center bg-black">
-  <div class="container px-4 mx-auto max-w-4xl">
+  <div class="container px-4 mx-auto max-w-4xl scroll">
     <h2 class="text-5xl md:text-6xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
       Contact me
     </h2>
@@ -58,6 +58,7 @@
         href="mailto:samuel.sotomayor.t@gmail.com"
         class="flex items-center justify-center h-18 w-18 rounded-full bg-zinc-800 hover:bg-zinc-700 transition-colors duration-300"
         aria-label="Email"
+        target="_blank"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -79,6 +80,7 @@
         href="https://www.linkedin.com/in/samuel-sotomayor-torrez-808800293/"
         class="flex items-center justify-center h-18 w-18 rounded-full bg-zinc-800 hover:bg-blue-700 transition-colors duration-300"
         aria-label="LinkedIn"
+        target="_blank"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -101,6 +103,7 @@
         href="https://x.com/Goal11_YT"
         class="flex items-center justify-center h-18 w-18 rounded-full bg-zinc-800 hover:bg-blue-500 transition-colors duration-300"
         aria-label="Twitter"
+        target="_blank"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -121,6 +124,7 @@
         href="https://github.com/SamuelSotomayor1"
         class="flex items-center justify-center h-18 w-18 rounded-full bg-zinc-800 hover:bg-purple-700 transition-colors duration-300"
         aria-label="GitHub"
+        target="_blank"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -180,3 +184,21 @@
     console.error("El formulario no fue encontrado.");
   }
 </script>
+
+<style>
+  @keyframes appear {
+    from {
+      opacity: 0;
+      scale: 1;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+  .scroll {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 10%;
+  }
+</style>

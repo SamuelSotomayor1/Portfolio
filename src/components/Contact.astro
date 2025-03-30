@@ -4,11 +4,11 @@
 
 <section id="contact" class="h-screen flex items-center bg-black">
   <div class="container px-4 mx-auto max-w-4xl scroll">
-    <h2 class="text-5xl md:text-6xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
+    <h2 class="scroll text-5xl md:text-6xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
       Contact me
     </h2>
     <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-8 relative overflow-hidden">
-      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-purple-500"></div>
+      <div class="scroll absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-purple-500"></div>
       <form class="space-y-6 relative z-10" id="contactForm" method="POST">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -186,19 +186,22 @@
 </script>
 
 <style>
-  @keyframes appear {
-    from {
-      opacity: 0;
-      scale: 1;
-    }
-    to {
-      opacity: 1;
-      scale: 1;
-    }
+  @keyframes futuristicFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    filter: blur(15px);
   }
-  .scroll {
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 10%;
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
   }
+}
+
+.scroll {
+  animation: futuristicFade 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
 </style>

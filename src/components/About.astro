@@ -27,30 +27,35 @@
       <p class="text-zinc-400 mt-3 text-xl px-8">
         Beyond coding, soccer is one of my biggest passions, I love playing and following my favorite teams.  
         I also enjoy video games, especially titles like Counter-Strike, Fortnite, and FC25.  
-        When it comes to music, I usually go for rap.
+      </p>
+      <p class="text-xl md:text-2xl mt-3 ml-8 text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-500">
+        Skills
+      </p>
+      <p class="text-zinc-400 text-xl px-8">
+        React - Nextjs - MongoDB - MySQL - Nodejs
       </p>
     </div>
   </div>
 </section>
 
 <style>
-  @keyframes appear {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-      filter: blur(10px);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-      filter: blur(0);
-    }
+  @keyframes futuristicFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    filter: blur(15px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
 
-  .scroll {
-    animation: appear 1s ease-out forwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+.scroll {
+  animation: futuristicFade 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
   }
 </style>
 

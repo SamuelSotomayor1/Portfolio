@@ -2,6 +2,10 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import submitFormRoute from './api/submitForm.js';
+import dotenv from 'dotenv';
+
+// Cargar las variables de entorno
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
